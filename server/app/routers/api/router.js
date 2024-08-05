@@ -2,7 +2,9 @@ const express = require("express");
 
 const router = express.Router();
 
-const { sayWelcome } = require("../../controllers/sayActions");
+const sayWelcome = (req, res) => {
+  res.send("Welcome to Wild Series !");
+};
 
 router.get("/", sayWelcome);
 
