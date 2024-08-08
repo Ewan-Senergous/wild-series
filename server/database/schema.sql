@@ -20,10 +20,10 @@ CREATE TABLE program (
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
   title VARCHAR(255) NOT NULL,
   synopsis TEXT NOT NULL,
-  poster VARCHAR(255),
-  country VARCHAR(255),
-  year INT,
-  category_id INT UNSIGNED,
+  poster VARCHAR(255) NOT NULL,
+  country VARCHAR(255) NOT NULL,
+  year INT UNSIGNED NOT NULL,
+  category_id INT UNSIGNED NOT NULL,
   FOREIGN KEY (category_id) REFERENCES category(id)
 );
 
